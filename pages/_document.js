@@ -11,7 +11,8 @@ export default function Document() {
           content="https://cdn.buildspace.so/courses/gpt3-writer/project-og.jpg"
         />
         <meta name="twitter:card" content="summary_large_image"></meta>
-      </Head>
+      </Head> 
+      
       <body>
         <Main />
         <NextScript />
