@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
-import { useState } from 'react';
+import pleistosLogo from '../assets/Logo Pleistos 2.png';
+import { useEffect, useState } from 'react';
+
 
 const Home = () => {
   const [userInput, setUserInput] = useState('');
@@ -32,11 +34,13 @@ const callGenerateEndpoint = async () => {
   };
   return (
     <div className="root">
+      <div className="headerSticky" id="stickyHeader">
+      </div>
       <div className="container">
         <div className="header">
           <div className="header-title">
             
-            <h1>Let's make poems with GPT-3!</h1>
+            <h1>Create whole poems from a few lines</h1>
           </div>
           <div className="header-subtitle">
             <h2>Provide a sample of your poetry and watch the magic</h2>
@@ -53,7 +57,7 @@ const callGenerateEndpoint = async () => {
         <h3>Output</h3>
       </div>
     </div>
-    <div className="output-content">
+    <div className="output-content"> 
       <p>{apiOutput}</p>
     </div>
   </div>
@@ -68,17 +72,16 @@ const callGenerateEndpoint = async () => {
     </div>
   </a>
 </div>
-
       </div>
       <div className="badge-container grow">
         <a
-          href="https://buildspace.so/builds/ai-writer"
+          href="https://www.linkedin.com/in/juan-pablo-cadavid-aguirre/"
           target="_blank"
           rel="noreferrer"
         >
-          <div className="badge">
-            <Image src={buildspaceLogo} alt="buildspace logo" />
-            <p>build with buildspace</p>
+          <div className="container">
+            <Image src={pleistosLogo} alt="Pleistos logo" />
+            <p>Hire me on Linkedin!</p>
           </div>
         </a>
       </div>
@@ -86,3 +89,4 @@ const callGenerateEndpoint = async () => {
   );
 };
 export default Home;
+

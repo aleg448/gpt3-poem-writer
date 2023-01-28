@@ -10,7 +10,7 @@ body {
     display: flex;
     place-content: center flex-start;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 32, 67);
     flex-flow: column nowrap;
     gap: 10px;
     height: 100vh;
@@ -29,11 +29,29 @@ body {
     height: fit-content;
     max-width: 975px;
     overflow: auto;
-    padding: 50px;
+    padding: 16px;
     position: relative;
     width: auto;
-    gap: 64px;
+    gap: 16px;
 }
+.roundy {    border-radius: 54.3478% / 238.095%;
+}
+/* Page content */
+.content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0; 
+      width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+  }
 
 .header {    
     display: flex;
@@ -43,6 +61,11 @@ body {
     color: #FFF
 }
 
+.headerSticky {
+    padding: 10px 16px;
+    background: rgb(0, 32, 67);
+    color: #f1f1f1;
+  }
 .header-title {
     display: flex;
     gap: 12px;
@@ -219,23 +242,43 @@ textarea {
 }
 
 .badge-container a {
-    border-bottom-width: 1px;
+    border-bottom-width: 10px;
     border-color: rgba(255, 255, 255, 0.1);
-    border-left-width: 1px;
-    border-right-width: 1px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-style: 2;
+    border-top-width: 10px;
+    background-color: rgb(0, 0, 0);
+    filter: grayscale(0);
+    transform: none;
+    transform-origin: 50% 50% 0px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 0em;
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10% / 100%;
+}
+.badge-container b {
+    border-bottom-width: 10px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-left-width: 10px;
+    border-right-width: 10px;
     border-style: solid;
-    border-top-width: 1px;
+    border-top-width: 10px;
     background-color: rgb(0, 0, 0);
     border-radius: 54.3478% / 238.095%;
-    filter: grayscale(1);
+    filter: grayscale(0);
     transform: none;
     transform-origin: 50% 50% 0px;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: -0.5px;
     line-height: 1em;
-    color: #fff;
-    padding: 12px;
+    color: #ffffff;
+    padding: 10px;
     text-decoration: none;
 }
 

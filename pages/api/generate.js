@@ -5,7 +5,7 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-const basePromptPrefix = "Continue the following song: \n Song: ";
+const basePromptPrefix = "Continue the following poem: \n Poem: ";
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
@@ -21,7 +21,7 @@ const generateAction = async (req, res) => {
 
   const secondPrompt = 
   `
-  Cntinue writing this song
+  Continue writing this poem
 
   verse 1:${req.body.userInput}
 
